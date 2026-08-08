@@ -19,7 +19,7 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const [pingLatency, setPingLatency] = useState(0);
 
   useEffect(() => {
-    const newSocket = io(window.location.origin, {
+    const newSocket = io(import.meta.env.VITE_WS_URL || "https://youtube-watch-party-1-n8ux.onrender.com", {
       autoConnect: true,
       reconnectionAttempts: 10,
       reconnectionDelay: 1000,
