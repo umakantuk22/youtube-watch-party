@@ -1,0 +1,20 @@
+{
+  "name": "youtube-watch-party-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-ready real-time YouTube Watch Party system with TypeScript, React, Express, and Socket.IO",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
+    "dev:server": "npm run dev --workspace=server",
+    "dev:client": "npm run dev --workspace=client",
+    "build": "npm run build --workspace=shared && npm run build --workspace=server && npm run build --workspace=client"
+  },
+  "workspaces": [
+    "shared",
+    "server",
+    "client"
+  ],
+  "devDependencies": {
+    "concurrently": "^10.0.4"
+  }
+}
