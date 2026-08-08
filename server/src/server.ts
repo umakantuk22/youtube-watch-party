@@ -25,7 +25,7 @@ const io = new Server(server, {
 const socketManager = new SocketManager(io);
 socketManager.initialize();
 
-server.listen(PORT, () => {
+server.listen(Number(PORT), '0.0.0.0', () => {
   console.log(`================================================`);
   console.log(`🚀 Watch Party Backend running on port ${PORT}`);
   console.log(`🌐 Health check: http://localhost:${PORT}/health`);
