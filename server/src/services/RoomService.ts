@@ -1,11 +1,11 @@
 import { PlaybackState, UserRole } from '@watch-party/shared';
-import { IRoomRepository } from '../repositories/IRoomRepository';
-import { MemoryRoomRepository } from '../repositories/MemoryRoomRepository';
-import { Room } from '../models/Room';
-import { Participant } from '../models/Participant';
-import { PermissionService } from './PermissionService';
-import { generateRoomId, generateParticipantId } from '../utils/idGenerator';
-import { NotFoundError, UnauthorizedError, ValidationError } from '../errors';
+import { IRoomRepository } from '../repositories/IRoomRepository.js';
+import { MemoryRoomRepository } from '../repositories/MemoryRoomRepository.js';
+import { Room } from '../models/Room.js';
+import { Participant } from '../models/Participant.js';
+import { PermissionService } from './PermissionService.js';
+import { generateRoomId, generateParticipantId } from '../utils/idGenerator.js';
+import { NotFoundError, UnauthorizedError, ValidationError } from '../errors/index.js';
 
 export class RoomService {
   private static instance: RoomService;
@@ -208,3 +208,4 @@ export class RoomService {
     return this.roomRepository.findById(roomId);
   }
 }
+

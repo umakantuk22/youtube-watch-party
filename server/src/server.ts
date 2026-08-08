@@ -1,8 +1,8 @@
 import http from 'http';
 import { Server } from 'socket.io';
 import dotenv from 'dotenv';
-import { createApp } from './app';
-import { SocketManager } from './sockets/SocketManager';
+import { createApp } from './app.js';
+import { SocketManager } from './sockets/SocketManager.js';
 
 dotenv.config();
 
@@ -31,3 +31,4 @@ server.listen(Number(PORT), '0.0.0.0', () => {
   console.log(`🌐 Health check: http://localhost:${PORT}/health`);
   console.log(`================================================`);
 });
+

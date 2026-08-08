@@ -1,5 +1,5 @@
 import { PlaybackState, RoomStateDTO, UserRole } from '@watch-party/shared';
-import { Participant } from './Participant';
+import { Participant } from './Participant.js';
 
 export class Room {
   public readonly id: string;
@@ -100,3 +100,4 @@ export class Room {
     };
   }
 }
+

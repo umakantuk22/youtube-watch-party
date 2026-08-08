@@ -1,4 +1,4 @@
-import { Room } from '../models/Room';
+import { Room } from '../models/Room.js';
 
 export interface IRoomRepository {
   save(room: Room): Promise<void>;
@@ -7,3 +7,4 @@ export interface IRoomRepository {
   findAll(): Promise<Room[]>;
   findBySocketId(socketId: string): Promise<{ room: Room; participantId: string } | null>;
 }
+

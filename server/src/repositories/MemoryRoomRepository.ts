@@ -1,5 +1,5 @@
-import { IRoomRepository } from './IRoomRepository';
-import { Room } from '../models/Room';
+import { IRoomRepository } from './IRoomRepository.js';
+import { Room } from '../models/Room.js';
 
 export class MemoryRoomRepository implements IRoomRepository {
   private static instance: MemoryRoomRepository;
@@ -42,3 +42,4 @@ export class MemoryRoomRepository implements IRoomRepository {
     return null;
   }
 }
+

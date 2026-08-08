@@ -1,5 +1,5 @@
 import { hasPermission, RoomAction, UserRole } from '@watch-party/shared';
-import { UnauthorizedError } from '../errors';
+import { UnauthorizedError } from '../errors/index.js';
 
 export class PermissionService {
   private static instance: PermissionService;
@@ -23,3 +23,4 @@ export class PermissionService {
     return hasPermission(role, action);
   }
 }
+

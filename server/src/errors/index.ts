@@ -1,6 +1,6 @@
-import { AppError } from './AppError';
+import { AppError } from './AppError.js';
 
-export * from './AppError';
+export * from './AppError.js';
 
 export class UnauthorizedError extends AppError {
   constructor(message: string = 'Unauthorized action for current role') {
@@ -19,3 +19,4 @@ export class ValidationError extends AppError {
     super(message, 400);
   }
 }
+

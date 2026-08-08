@@ -1,7 +1,7 @@
 import { Server, Socket } from 'socket.io';
 import { SocketEvents, ChatMessageDTO, ReactionDTO } from '@watch-party/shared';
-import { RoomService } from '../services/RoomService';
-import { generateMessageId } from '../utils/idGenerator';
+import { RoomService } from '../services/RoomService.js';
+import { generateMessageId } from '../utils/idGenerator.js';
 import {
   createRoomSchema,
   joinRoomSchema,
@@ -10,7 +10,7 @@ import {
   setRoleSchema,
   kickParticipantSchema,
   chatMessageSchema
-} from '../utils/validators';
+} from '../utils/validators.js';
 
 export class SocketManager {
   private io: Server;
@@ -318,3 +318,4 @@ export class SocketManager {
     });
   }
 }
+
